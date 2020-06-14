@@ -1,6 +1,14 @@
 const mongoose = require('mongoose');
 
 const NotificationSchema = new mongoose.Schema({
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
   message: {
     type: String,
     required: true,
@@ -9,7 +17,7 @@ const NotificationSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
   },
-  ready: {
+  read: {
     type: Boolean,
     required: true,
     default: false,
