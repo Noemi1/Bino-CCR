@@ -1,10 +1,3 @@
-/**
- * Nome
- * Modelo
- * Telefone
- * Avatar
- */
-
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
@@ -23,4 +16,4 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('Dev', UserSchema);
+module.exports = mongoose.model('User', UserSchema);
