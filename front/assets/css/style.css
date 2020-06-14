@@ -81,7 +81,7 @@ body {
 
 .icon-caminhao svg {
     width: 81%;
-    height: auto;
+    height: 184px;
     margin-top: 55px;
     margin: 0 auto;
 }
@@ -93,7 +93,17 @@ body {
     width: 100%;
     height: 50vh;
     z-index: 0;
-    margin-top: 120px;
+    margin-top: 140px;
+}
+
+.svg-fundo2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    z-index: 0;
+    margin-top: 0px;
 }
 
 .svg-fundo svg {
@@ -115,8 +125,14 @@ main.main {
 .div-bottom {
     position: absolute;
     bottom: 0;
-    height: 53vh;
+    height: 50vh;
     padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.div-bottom2 {
+    height: 55vh;
 }
 
 .content {
@@ -168,9 +184,10 @@ h4.profile {
     height: 60px;
     border-radius: 8px;
     border: none;
-    color: #fff;
+    color: #000;
     padding: 0 60px 0 50px;
     font-size: 19px;
+    border: 3px #8441cd solid;
 }
 
 span.input-icon {
@@ -184,12 +201,16 @@ span.input-icon {
 
 .btn-logar {
     position: absolute;
+    top: 0;
     right: 0;
     height: 60px;
     width: 60px;
     border-radius: 0 8px 8px 0;
     border: none;
     background-color: #8441CD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-destino {
@@ -253,17 +274,20 @@ span.icon-input-destino {
     margin: auto;
 }
 
-button.iniciar-rota {
+.iniciar-rota {
     width: 200px;
     height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
     color: #fff;
-    background-color: #8441CD;
-    box-shadow: 0px 2px 0px #CC8F23;
-    border-radius: 8px;
     border: none;
     font-size: 32px;
     font-weight: 500;
-    margin-top: 40px;
+    border-radius: 8px;
+    background-color: #8441CD;
+    box-shadow: 0px 2px 0px #CC8F23;
 }
 
 .inputs-destino {
@@ -345,7 +369,7 @@ h3.resumo-title {
     color: #8441CD;
 }
 
-button.finalizarResumo {
+.finalizarResumo {
     width: 200px;
     height: 60px;
     left: 80px;
@@ -362,9 +386,186 @@ button.finalizarResumo {
     color: #FFFFFF;
     border: 0;
     margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.oi {
-    background-color: red;
-    columns: 1;
+.notification {
+    position: relative;
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.notifications-object {
+    height: a;
+    border: 4px #8441cd solid;
+    border-radius: 11px;
+    height: 90px;
+    width: 100%;
+}
+
+.notification-close {
+    background-color: transparent;
+    border: none;
+    font-size: 31px;
+    padding: 0 14px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8441cd;
+}
+
+.notification-inner {
+    padding: 15px;
+}
+
+.notification-btnOk {
+    background: #e4950a;
+    border: none;
+    padding: 7px 30px;
+    color: #fff;
+    margin-left: auto;
+    display: flex;
+    font-size: 18px;
+}
+
+.notifications-box {
+    position: fixed;
+    top: 0;
+    width: 334px;
+    right: 0;
+    z-index: 2;
+}
+
+.left {
+    width: 20%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 11px 10px 10px;
+}
+
+.right {
+    width: 70%;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.left svg {
+    width: auto;
+    height: 57px;
+}
+
+.right h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #8441CD;
+    margin: 19px 0 5px;
+}
+
+.right p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8441CD;
+}
+
+.yellow {
+    color: #f0a92c;
+}
+
+.notf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    opacity: 1;
+    border-radius: 11px 0 0 11px;
+    transform: translateX(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.logo-bino {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-bino svg {
+    width: 160px;
+    height: 51px;
+    z-index: 5;
+}
+
+.inputs-box-dados {
+    width: 290px;
+    margin: auto;
+}
+
+.inputs-box-dados .input-container {
+    margin: 10px auto;
+}
+
+.inputs-box-dados .input-container input {
+    width: 100%;
+    font-size: 14px;
+    padding: 0 0 0 50px;
+}
+
+.btn-entrar {
+    background: #8441cd;
+    width: 198px;
+    height: 51px;
+    display: flex;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-family: Roboto;
+    margin: 20px auto;
+}
+
+.btn-entrar svg {
+    margin-left: 15px;
+    margin-top: 3px;
 }
