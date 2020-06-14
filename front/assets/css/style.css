@@ -137,6 +137,8 @@ main.main {
     padding: 20px;
     margin: 0 auto;
     width: 100%;
+    background: #f0a92c;
+    z-index: 5;
 }
 
 .div-bottom2 {
@@ -236,8 +238,10 @@ span.input-icon {
 .escolher {
     position: absolute;
     bottom: 0;
-    height: 60vh;
+    min-height: 60vh;
     padding: 0 20px;
+    background: #f0a92c;
+    z-index: 5;
 }
 
 h4.profilePerson {
