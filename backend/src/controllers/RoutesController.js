@@ -1,6 +1,6 @@
 const Route = require('../models/Route');
 const User = require('../models/User');
-const Notification = require('../models/Notification');
+const { sendCreateRouteNotifications } = require('../utils/createNotification');
 
 module.exports = {
   async index(request, response) {
@@ -16,29 +16,7 @@ module.exports = {
 
     return response.json(routes);
   },
-  // async show(request, response) {
-  //   const { id } = request.params;
-  //   const { user_id } = request.headers;
 
-  //   const user = await User.findOne({ _id: user_id });
-
-  //   if (!user) {
-  //     return response.status(400).json({ error: 'User not found' });
-  //   }
-  //   const route = await Route.findOne({ _id: id });
-
-  //   if (!route) {
-  //     return response.status(400).json({ error: 'Route not found' });
-  //   }
-
-  //   if (route.user !== user_id) {
-  //     return response
-  //       .status(401)
-  //       .json('You can only view routes that you have created.');
-  //   }
-
-  //   return response.json(route);
-  // },
   async store(request, response) {
     const { user_id } = request.headers;
     const {
@@ -71,11 +49,7 @@ module.exports = {
       destination,
     });
 
-    await Notification.create({
-      user,
-      message: 'Primeira notificação',
-    });
-
+    sendCreateRouteNotifications(user);
     return response.json(route);
   },
 };
