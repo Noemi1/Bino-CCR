@@ -1,11 +1,15 @@
-#map {
-    height: 100%;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+*:not(input):focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 html,
@@ -13,6 +17,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Roboto;
 }
 
 .around {
@@ -79,7 +84,7 @@ body {
     left: 0;
 }
 
-.icon-caminhao svg {
+.icon-caminhao img {
     width: 81%;
     height: 184px;
     margin-top: 55px;
@@ -100,13 +105,14 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 50vh;
+    width: 100vw;
+    height: 80vh;
     z-index: 0;
     margin-top: 0px;
 }
 
-.svg-fundo svg {
+.svg-fundo svg,
+.svg-fundo2 svg {
     width: 100%;
     height: 100%;
     transform: translateY(-140px);
@@ -117,8 +123,10 @@ body {
 
 main.main {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
     background-color: #F0A92C;
 }
 
@@ -132,7 +140,7 @@ main.main {
 }
 
 .div-bottom2 {
-    height: 55vh;
+    height: auto;
 }
 
 .content {
@@ -233,7 +241,7 @@ span.input-icon {
 }
 
 h4.profilePerson {
-    font-size: 17px;
+    font-size: 21px;
     color: #fff;
 }
 
@@ -275,12 +283,12 @@ span.icon-input-destino {
 }
 
 .iniciar-rota {
-    width: 200px;
+    width: 80%;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     color: #fff;
     border: none;
     font-size: 32px;
@@ -288,6 +296,7 @@ span.icon-input-destino {
     border-radius: 8px;
     background-color: #8441CD;
     box-shadow: 0px 2px 0px #CC8F23;
+    margin: 30px auto;
 }
 
 .inputs-destino {
@@ -302,10 +311,12 @@ h3.resumo-title {
     /* identical to box height */
     letter-spacing: 0.4px;
     color: #8441CD;
-    text-align: center;
+    text-align: left;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
+    display: block;
+    margin-left: 13px;
 }
 
 .resumo {
@@ -406,7 +417,7 @@ h3.resumo-title {
     height: a;
     border: 4px #8441cd solid;
     border-radius: 11px;
-    height: 90px;
+    height: a;
     width: 100%;
 }
 
@@ -440,11 +451,9 @@ h3.resumo-title {
 }
 
 .notifications-box {
-    position: fixed;
-    top: 0;
-    width: 334px;
-    right: 0;
+    width: 90%;
     z-index: 2;
+    margin: 20px auto;
 }
 
 .left {
@@ -498,6 +507,7 @@ h3.resumo-title {
     align-items: center;
     justify-content: center;
     position: relative;
+    margin: 0px 0 5px;
 }
 
 .close {
@@ -560,7 +570,7 @@ h3.resumo-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 22px;
     font-family: Roboto;
     margin: 20px auto;
 }
@@ -568,4 +578,203 @@ h3.resumo-title {
 .btn-entrar svg {
     margin-left: 15px;
     margin-top: 3px;
+}
+
+.pedagios-title {
+    margin: 35px 15px;
+}
+
+.pedagios-title h3 {
+    font-size: 31px;
+    letter-spacing: 0.4px;
+    color: #8441CD;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.ul {
+    width: 100%;
+    padding: 0 25px;
+    list-style: none;
+}
+
+.ul li {
+    margin: 10px;
+    border: 4px #7439b5 solid;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 10px 0;
+    position: relative;
+}
+
+.pedagio-content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    text-align: center;
+    flex-flow: wrap;
+    margin: 10px 0;
+}
+
+.btn-voltar {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 16px;
+    color: #ffffff;
+    margin: 30px 0px 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.pedagio-content p {
+    margin: 0;
+}
+
+.btn-voltar svg {
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+}
+
+.btn-voltar span {
+    background: #7439b5;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 19px;
+}
+
+span.voltar-text {
+    background: none;
+    width: auto;
+    height: auto;
+    /* margin: 0 0 0 15px; */
+}
+
+.exerciocios-header {
+    margin: 30px 40px 30px;
+}
+
+.exerciocios-header h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #8441CD;
+}
+
+.exerciocios-header p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 16px;
+    color: #8441CD;
+    margin: 10px 0;
+}
+
+.exercicios-slide {
+    width: 90%;
+    margin: auto;
+    display: block;
+    height: auto;
+}
+
+.exercicio-item p {
+    color: #8b4bd0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.exercicio-item {
+    margin: 40px 30px 50px;
+    text-align: center;
+    box-shadow: 2px 2px 15px 0px #583c0ab5;
+    border-radius: 10px;
+    padding: 10px 10px 30px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.exercicio-item .img {
+    width: 90%;
+    height: 206px;
+    background-size: contain;
+    margin: 0 auto 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.exercicios-slide .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #8542cd;
+    border-radius: 50%;
+    border: none;
+    left: 10px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercicios-slide .slick-next {
+    right: 10px;
+    left: auto;
+}
+
+.exercicios-slide .slick-arrow::after {
+    content: '>';
+    position: absolute;
+    top: 11px;
+    left: 18px;
+    font-size: 16px;
+    font-family: 'Font Awesome 5 Free';
+    color: #fff;
+    font-weight: 900;
+    transform: scaleX(1.2) scaleY(2.5);
+}
+
+.exercicios-slide .slick-prev::after {
+    transform: scaleX(1.2) scaleY(2.5) rotateY(180deg);
+    right: 17px;
+}
+
+.inputs-destino input.input-partida {
+    padding: 0 0px 0 60px;
+}
+
+.inputs-box-dados .cadastrado {
+    text-align: center;
+    display: block;
+    font-size: 18px;
+}
+
+.notificacoes-btn {
+    border-radius: 50%;
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #914dba;
+    border: 5px #914dba solid;
+}
+
+header.resumo-header {
+    display: flex;
 }
