@@ -1,5 +1,6 @@
 const Route = require('../models/Route');
 const User = require('../models/User');
+const Notification = require('../models/Notification');
 
 module.exports = {
   async index(request, response) {
@@ -69,6 +70,12 @@ module.exports = {
       location,
       destination,
     });
+
+    await Notification.create({
+      user,
+      message: 'Primeira notificação',
+    });
+
     return response.json(route);
   },
 };
